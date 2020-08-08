@@ -14,7 +14,7 @@ function computerPlay(){
 function playRound(playerSelection, computerSelection){  
     playerSelection = this.getAttribute("id");
     computerSelection = computerPlay();
-    para.textContent = `You chose ${playerSelection}, Computer chose: ${computerSelection}`;
+    para.textContent = `You chose ${playerSelection}, Computer chose ${computerSelection}.`;
     if (computerSelection === playerSelection){
         result.textContent = "Tie! You both chose " + computerSelection + ".";
         

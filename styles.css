@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 200px;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    margin-top: 50px;
+    font-family: "Luckiest Guy", cursive;
+}
+
+.container {
+    margin: 0 auto;
+    width: 800px;
+    text-align: center;  
+}
+
+#scoreboard {
+    font-size: 2rem;
+}
+
+button {
+    padding: .75em 1.5em;
+    margin-right: 25px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    outline: none;
+    transition: all 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#para, #result {
+    font-size: 1.2rem;
+}
+
+#para {
+    margin-top: 50px;
+}
+
+
+
