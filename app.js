@@ -1,9 +1,14 @@
-
+// Variables
 let choices = ["rock", "paper", "scissors"];
 let playerScore = 0;
 let computerScore = 0;
 const para = document.querySelector("#para");
 const result = document.querySelector("#result");
+const buttons = document.querySelectorAll("button");
+const restartButton = document.createElement("button");
+const container = document.querySelector(".container");
+const scoreboard = document.querySelector("#scoreboard");
+
 
 // Generate a random choice for the computer
 function computerPlay(){
@@ -47,24 +52,40 @@ function playRound(playerSelection, computerSelection){
     checkScore();
 }
 
-const buttons = document.querySelectorAll("button");
+
 buttons.forEach(button => button.addEventListener("click", playRound));
-
-const container = document.querySelector(".container");
-const scoreboard = document.querySelector("#scoreboard");
 scoreboard.textContent = `Player score: ${playerScore}; Computer score: ${computerScore}`;
-
+restartButton.textContent = "RESTART";
 const gameOver = document.createElement("h2");
 
+// Ends game after either player reaches 5 points
 function checkScore(){
     if (playerScore >= 5) {
         console.log('you win the game');
         gameOver.textContent = 'You win the game!';
         container.appendChild(gameOver);
+        endGame();
     }
 
     if (computerScore >= 5) {
         gameOver.textContent = 'You lose the game!';
         container.appendChild(gameOver);
+        endGame();
     }   
+}
+
+function endGame(){
+    container.appendChild(restartButton);
+    restartButton.addEventListener("click", restartGame);
+}
+
+// Resets the counter and removes text to start game over.
+function restartGame(){
+    playerScore = 0;
+    computerScore = 0;
+    scoreboard.textContent = `Player score: ${playerScore}; Computer score: ${computerScore}`;
+    container.removeChild(restartButton);
+    container.removeChild(gameOver);
+    result.textContent = "";
+    para.textContent = "";
 }
