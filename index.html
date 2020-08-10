@@ -6,19 +6,20 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://kit.fontawesome.com/839a4a9662.js" crossorigin="anonymous"></script>
     </head>
     <body>
+
         <h1>Rock Paper Scissors Game!</h1>
         <div class=container>
-            <p id="scoreboard"></p>
-            <button id="rock" class="btn-rock">ROCK</button>
-            <button id="paper" class="btn-paper">PAPER</button>
-            <button id="scissors" class="btn-scissors">SCISSORS</button>
+            <p id="scoreboard">Player score: <span id="player-score"></span>| Computer score: <span id="computer-score"></span></p>
+            <button id="rock" class="btn-rock"><i class="fas fa-hand-rock"></i></button>
+            <button id="paper" class="btn-paper"><i class="fas fa-hand-paper"></i></button>
+            <button id="scissors" class="btn-scissors"><i class="fas fa-hand-scissors"></i></button>
             <p id="para"></p>
             <p id="result"></p>
         </div>
         
-
         <script src="app.js" async defer></script>
     </body>
 </html>

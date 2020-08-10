@@ -36,6 +36,11 @@ h2 {
     font-size: 2rem;
 }
 
+span {
+    font-family: "Luckiest Guy", cursive;
+    font-size: 3.25rem;
+}
+
 button {
     padding: .75em 1.5em;
     margin-right: 25px;
@@ -45,13 +50,19 @@ button {
     border-radius: 10px;
     font-weight: bold;
     outline: none;
-    transition: all 0.3s;
+    transition: all 0.2s;
     background-color: #f25f26;
 }
 
 button:hover {
     transform: scale(1.1);
     background-color: #ff7e4b;
+}
+
+.btn-rock, 
+.btn-paper,
+.btn-scissors {
+    font-size: 2rem;
 }
 
 #para, #result {

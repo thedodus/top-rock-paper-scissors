@@ -7,7 +7,8 @@ const result = document.querySelector("#result");
 const buttons = document.querySelectorAll("button");
 const restartButton = document.createElement("button");
 const container = document.querySelector(".container");
-const scoreboard = document.querySelector("#scoreboard");
+const playerScoreDisplay = document.querySelector("#player-score");
+const computerScoreDisplay = document.querySelector("#computer-score");
 
 
 // Generate a random choice for the computer
@@ -48,13 +49,15 @@ function playRound(playerSelection, computerSelection){
 
         playerScore++;
     }
-    scoreboard.textContent = `Player score: ${playerScore}; Computer score: ${computerScore}`;
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
     checkScore();
 }
 
 
 buttons.forEach(button => button.addEventListener("click", playRound));
-scoreboard.textContent = `Player score: ${playerScore}; Computer score: ${computerScore}`;
+playerScoreDisplay.textContent = playerScore;
+computerScoreDisplay.textContent = computerScore;
 restartButton.textContent = "RESTART";
 const gameOver = document.createElement("h2");
 
@@ -83,7 +86,8 @@ function endGame(){
 function restartGame(){
     playerScore = 0;
     computerScore = 0;
-    scoreboard.textContent = `Player score: ${playerScore}; Computer score: ${computerScore}`;
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
     container.removeChild(restartButton);
     container.removeChild(gameOver);
     result.textContent = "";
